@@ -32,7 +32,6 @@
             <button type="submit" class="botao">Logar</button>
         </form>
         <a href="../index.php"><button type="submit" class="botao">Home</button></a>
-        <a href="cad_user.php"><button type="submit" class="botao">Cadastrar</button></a>
     </main>
 </body>
 
