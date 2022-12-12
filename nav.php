@@ -6,7 +6,14 @@ $stmt->execute();
 
 $results = $stmt->fetchALL(PDO::FETCH_ASSOC);
 
+$stmt = $conectar->prepare("SELECT * FROM category");
+$stmt->execute();
+
+
+$results1 = $stmt->fetchALL(PDO::FETCH_ASSOC);
+
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -50,13 +57,13 @@ $results = $stmt->fetchALL(PDO::FETCH_ASSOC);
                             GIFT
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="category.php?cat=1">League of Legends</a></li>
-                            <li><a class="dropdown-item" href="category.php?cat=2">Valorant</a></li>
-                            <li><a class="dropdown-item" href="category.php?cat=3">Fortnite</a></li>
+                            <?php foreach ($results1 as $category): ?>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="category.php?id=4">Outros</a></li>
+                            <li><a class="dropdown-item" href="category.php?cat=<?= $category['id_cat'] ?>"> <?= $category['name_cat'] ?>
+                                </a></li>
+                            <?php endforeach; ?>
                         </ul>
                     </li>
                 </ul>

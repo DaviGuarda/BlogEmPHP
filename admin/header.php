@@ -16,55 +16,68 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <style>
-        body{
+        body {
             background-color: #BAFFF1;
         }
-        h2{
+
+        h2 {
             color: goldenrod;
         }
-        #sidebarMenu{
+
+        #sidebarMenu {
             height: 100%;
         }
-        nav{
-            padding-bottom: 100%;
+
+        nav {
+            padding-bottom: 35%;
             box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
         }
-        nav .nav-item a{
+
+        nav .nav-item a {
             color: goldenrod;
             display: flex;
             align-items: center;
             gap: 10px;
         }
+
         nav .nav-item:hover {
-            color:gold;
+            color: gold;
         }
-        h3{
+
+        h3 {
             font-size: 1.2rem;
             margin-bottom: 40px;
         }
-        p a{
+
+        p a {
             color: goldenrod;
             display: flex;
             align-items: center;
             gap: 10px;
             text-decoration: none;
         }
-        p a:hover{
-            color:gold;
+
+        p a:hover {
+            color: gold;
         }
-        li a{
+
+        li a {
             text-decoration: none;
         }
-        #main-title{
+
+        #main-title {
             color: goldenrod;
         }
-        tr th{
+
+        tr th {
             color: goldenrod;
         }
-        tr td{
+
+        tr td {
             color: #42463D;
         }
-        tr td a{
+
+        tr td a {
             text-decoration: none;
         }
     </style>
@@ -75,7 +88,9 @@
         <div class="row">
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 text-white" style="background-color: rgba(23, 0, 95, 0.8);">
                 <h2>Bem vindo,</h2>
-                <h3><?php echo $_SESSION['nome']; ?></h3>
+                <h3>
+                    <?php echo $_SESSION['nome']; ?>
+                </h3>
                 <ul class="nav flex-column">
                     <li class="nav-item mb-3">
                         <a href="view2.php" class="nav-item"><ion-icon name="analytics-outline"></ion-icon>Dashboard</a>
@@ -83,6 +98,16 @@
                     <li class="nav-item mb-3">
                         <a href="insert.php" class="nav-item"><ion-icon name="add-circle-outline"></ion-icon>Inserir</a>
                     </li>
+                    <li class="nav-item mb-3">
+                        <a href="cad_user.php" class="nav-item"><ion-icon name="add-outline"></ion-icon>Cadastrar
+                            Usuário</a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a href="cat_add.php" class="nav-item"><ion-icon name="duplicate-outline"></ion-icon>Adicionar
+                            nova categoria</a>
+                    </li>
                 </ul>
                 <p><a href="?sair"><ion-icon name="exit-outline"></ion-icon>Deslogar</a></p>
             </nav>
+            <main class="col-md-9 col-lg-10 pt-5 pb-5">
+                <div class="container">
