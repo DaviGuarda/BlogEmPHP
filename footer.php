@@ -22,12 +22,13 @@
     <!--Left-->
     <div class="right">
         <h4 class="title-footer">Contato</h4>
-        <form action="#" method="post">
-            <input type="text" name="nome" placeholder="Nome" required="" />
+        <form action="https://api.staticforms.xyz/submit" method="post">
+            <input type="text" name="name" placeholder="Nome" required="" />
             <input type="email" name="email" placeholder="E-mail" required="" />
-            <input type="text" name="assunto" placeholder="assunto" required="" />
-            <textarea name="messagem" placeholder="Messagem" required=""></textarea>
-            <button class="btn">Enviar</button>
+            <textarea name="message" placeholder="Messagem" required=""></textarea>
+            <button type="submit" class="btn">Enviar</button>
+            <input type="hidden" name="accessKey" value="8d900699-deaf-4a88-b8cc-8a860c099c4f">
+            <input type="hidden" name="redirectTo" value="http://localhost/ProjetoBlog/index.php">
         </form>
     </div>
     <!--Right-->
